@@ -1,0 +1,361 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Estilos para la barra de navegación superior */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e9ecef;
+}
+
+.language-select {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.language-select:hover {
+    background-color: #555;
+}
+
+.language-select:focus {
+    outline: none;
+    background-color: #555;
+}
+
+/* Estilos para el contenedor principal */
+main {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+}
+
+.cont {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #555;
+}
+
+#search-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el contenedor de películas */
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.close {
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-info {
+    text-align: left;
+}
+
+.modal-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.modal-info p {
+    font-size: 1rem;
+    margin-left: 10px;
+    line-height: 1.6;
+}
+
+.trailer-container {
+    margin-top: 20px;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+/* Estilos para el contenido del iframe */
+.trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 8px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    main {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #search-input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    #search-button {
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Espacio entre el título y los elementos del menú */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0; /* Eliminamos el padding para ajustes más precisos */
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Espacio entre elementos del menú */
+    }
+
+    .language-select {
+        margin-top: 8px; /* Espacio entre el último elemento del menú y el select */
+    }
+
+    .search-container {
+        padding: 0;
+        margin-top:100px;
+    }
+
+    #search-input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    #search-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .movie-container {
+        gap: 15px;
+    }
+
+    .modal-content {
+        padding: 16px;
+    }
+
+    .modal-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+    }
+
+    .movie-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}

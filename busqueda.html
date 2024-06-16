@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search - Busqueda Avanzada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style-busqueda.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Search</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="trending-link">Inicio</a></li>
+                    <li><a href="popularidad.html" id="trending-link">Popularidad y tendencias</a></li>
+
+                </ul>
+            </nav>
+            <select id="language-select">
+                <option value="en-US">English</option>
+                <option value="es-ES">Español</option>
+                <option value="pt-BR">Português</option>
+            </select>
+        </div>
+    </header>
+    <div class="main">
+        <div class="cont">
+            <section id="advanced-search">
+                <h2 id="advanced-search-title">Advanced Search</h2>
+                <form id="advanced-search-form" class="search-container">
+                    <label for="genre-select" id="genre-label">Genre:</label>
+                    <select id="genre-select"></select>
+
+                    <label for="year-input" id="year-label">Year:</label>
+                    <input type="number" id="year-input" placeholder="e.g., 2023">
+
+                    <label for="popularity-input" id="popularity-label">Popularity:</label>
+                    <input type="number" id="popularity-input" placeholder="e.g., 100">
+
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </section>
+            <div id="movie-container" class="movie-container"></div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <img id="modal-poster" src="" alt="">
+                <p id="modal-release-date"></p>
+                <p id="modal-popularity"></p>
+                <p id="modal-overview"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script-busqueda.js"></script>
+</body>
+</html>

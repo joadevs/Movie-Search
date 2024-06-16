@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main {
+    padding: 20px;
+    margin-top:80px;
+}
+
+/* Estilos para la sección de búsqueda avanzada */
+#advanced-search {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#advanced-search h2 {
+    margin-top: 0;
+}
+
+#advanced-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#advanced-search-form label {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+}
+
+#advanced-search-form select,
+#advanced-search-form input,
+#advanced-search-form button {
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#advanced-search-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#advanced-search-form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el contenedor de películas */
+#movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.movie-info {
+    margin-top: 10px;
+}
+
+.movie-info h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.movie-info p {
+    margin: 5px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main{
+        margin-top: 120px;
+    }
+    #advanced-search-form select,
+    #advanced-search-form input,
+    #advanced-search-form button {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+   
+
+    #advanced-search {
+        padding: 10px;
+    }
+
+    #advanced-search-form {
+        gap: 5px;
+    }
+
+    #advanced-search-form select,
+    #advanced-search-form input,
+    #advanced-search-form button {
+        padding: 8px;
+    }
+
+    .movie {
+        padding: 5px;
+    }
+}
